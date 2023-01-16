@@ -66,6 +66,20 @@ class SqrBoxFilterFactory {
           },
         );
         break;
+      case CVPathFrom.LOCAL:
+        final _file = File(pathString);
+        _fileAssets = await _file.readAsBytes();
+        result = await platform.invokeMethod(
+          'sqrBoxFilter',
+          {
+            "pathType": 4,
+            "pathString": '',
+            "data": _fileAssets,
+            'outputDepth': outputDepthTemp,
+            'kernelSize': kernelSizeTemp,
+          },
+        );
+        break;
     }
     return result;
   }

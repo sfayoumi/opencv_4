@@ -16,6 +16,7 @@ class PyrMeanShiftFilteringFactory {
                 1 -> result.success(pyrMeanShiftFilteringS(pathString, spatialWindowRadius, colorWindowRadius))
                 2 -> result.success(pyrMeanShiftFilteringB(data, spatialWindowRadius, colorWindowRadius))
                 3 -> result.success(pyrMeanShiftFilteringB(data, spatialWindowRadius, colorWindowRadius))
+                4 -> result.success(pyrMeanShiftFilteringB(data, spatialWindowRadius, colorWindowRadius))
             }
         }
 

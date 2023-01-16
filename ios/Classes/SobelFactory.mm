@@ -19,6 +19,9 @@
         case 3:
             result(sobelB(data, depth, dx, dy));
             break;
+        case 4:
+            result(sobelB(data, depth, dx, dy));
+            break;
         
         default:
             break;

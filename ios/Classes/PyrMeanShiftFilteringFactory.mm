@@ -19,6 +19,9 @@
         case 3:
             result(pyrMeanShiftFilteringB(data, spatialWindowRadius, colorWindowRadius));
             break;
+        case 4:
+            result(pyrMeanShiftFilteringB(data, spatialWindowRadius, colorWindowRadius));
+            break;
         
         default:
             break;

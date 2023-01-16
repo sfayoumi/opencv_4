@@ -20,6 +20,9 @@
         case 3:
             result(gaussianBlurB(data, kernelSizeDouble, sigmaX));
             break;
+        case 4:
+            result(gaussianBlurB(data, kernelSizeDouble, sigmaX));
+            break;
         
         default:
             break;

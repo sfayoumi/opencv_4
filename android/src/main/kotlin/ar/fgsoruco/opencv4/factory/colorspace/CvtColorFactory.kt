@@ -15,6 +15,7 @@ class CvtColorFactory {
                 1 -> result.success(cvtColorS(pathString, outputType))
                 2 -> result.success(cvtColorB(data, outputType))
                 3 -> result.success(cvtColorB(data, outputType))
+                4 -> result.success(cvtColorB(data, outputType))
             }
         }
 

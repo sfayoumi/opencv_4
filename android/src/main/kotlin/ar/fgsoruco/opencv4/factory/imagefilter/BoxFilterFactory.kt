@@ -18,6 +18,7 @@ class BoxFilterFactory {
                 1 -> result.success(boxFilterS(pathString, outputDepth, kernelSize, anchorPoint, normalize, borderType))
                 2 -> result.success(boxFilterB(data, outputDepth, kernelSize, anchorPoint, normalize, borderType))
                 3 -> result.success(boxFilterB(data, outputDepth, kernelSize, anchorPoint, normalize, borderType))
+                4 -> result.success(boxFilterB(data, outputDepth, kernelSize, anchorPoint, normalize, borderType))
             }
         }
 

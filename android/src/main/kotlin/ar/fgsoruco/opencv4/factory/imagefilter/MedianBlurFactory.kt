@@ -16,6 +16,7 @@ class MedianBlurFactory {
                 1 -> result.success(medianBlurS(pathString, kernelSize))
                 2 -> result.success(medianBlurB(data, kernelSize))
                 3 -> result.success(medianBlurB(data, kernelSize))
+                4 -> result.success(medianBlurB(data, kernelSize))
             }
         }
 

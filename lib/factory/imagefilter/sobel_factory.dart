@@ -68,6 +68,21 @@ class SobelFactory {
           },
         );
         break;
+      case CVPathFrom.LOCAL:
+        final _file = File(pathString);
+        _fileAssets = await _file.readAsBytes();
+        result = await platform.invokeMethod(
+          'sobel',
+          {
+            "pathType": 4,
+            "pathString": '',
+            "data": _fileAssets,
+            'depth': depthTemp,
+            'dx': dx,
+            'dy': dy,
+          },
+        );
+        break;
     }
     return result;
   }

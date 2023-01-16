@@ -58,6 +58,18 @@ class ThresholdFactory {
           'thresholdType': thresholdType
         });
         break;
+      case CVPathFrom.LOCAL:
+        _file = File(pathString);
+        final _fileAssets = await _file.readAsBytes();
+        result = await platform.invokeMethod('threshold', {
+          "pathType": 4,
+          "pathString": '',
+          "data": _fileAssets,
+          'thresholdValue': thresholdValue,
+          'maxThresholdValue': maxThresholdValue,
+          'thresholdType': thresholdType
+        });
+        break;
       default:
         _fileAssets = await Utils.imgAssets2Uint8List(pathString);
         result = await platform.invokeMethod('threshold', {

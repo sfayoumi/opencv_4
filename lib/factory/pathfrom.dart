@@ -7,9 +7,11 @@
 ///[URL] configure opencv for web images
 ///[GALLERY_CAMERA] configure opencv for images obtained from the image_picker package
 ///[ASSETS: default] configure opencv for flutter images in pubspect.yaml --> assets/test.jpg
+///[LOCAL] configure opencv for images in app local directories --> assets/test.jpg
 ///
 enum CVPathFrom {
   URL,
   GALLERY_CAMERA,
   ASSETS,
+  LOCAL,
 }

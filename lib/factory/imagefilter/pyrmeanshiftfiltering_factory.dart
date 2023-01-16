@@ -63,6 +63,20 @@ class PyrMeanShiftFilteringFactory {
           },
         );
         break;
+      case CVPathFrom.LOCAL:
+        final _file = File(pathString);
+        _fileAssets = await _file.readAsBytes();
+        result = await platform.invokeMethod(
+          'pyrMeanShiftFiltering',
+          {
+            "pathType": 4,
+            "pathString": '',
+            "data": _fileAssets,
+            'spatialWindowRadius': spatialWindowRadius,
+            'colorWindowRadius': colorWindowRadius,
+          },
+        );
+        break;
     }
     return result;
   }

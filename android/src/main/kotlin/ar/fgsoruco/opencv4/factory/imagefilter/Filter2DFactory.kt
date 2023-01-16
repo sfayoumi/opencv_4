@@ -17,6 +17,7 @@ class Filter2DFactory {
                 1 -> result.success(filter2DS(pathString, outputDepth, kernelSize))
                 2 -> result.success(filter2DB(data, outputDepth, kernelSize))
                 3 -> result.success(filter2DB(data, outputDepth, kernelSize))
+                4 -> result.success(filter2DB(data, outputDepth, kernelSize))
             }
         }
 

@@ -16,6 +16,7 @@ class SobelFactory {
                 1 -> result.success(sobelS(pathString, depth, dx, dy))
                 2 -> result.success(sobelB(data, depth, dx, dy))
                 3 -> result.success(sobelB(data, depth, dx, dy))
+                4 -> result.success(sobelB(data, depth, dx, dy))
             }
         }
 

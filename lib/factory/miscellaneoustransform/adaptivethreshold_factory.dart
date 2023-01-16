@@ -78,6 +78,20 @@ class AdaptiveThresholdFactory {
           'constantValue': constantValue
         });
         break;
+      case CVPathFrom.LOCAL:
+        _file = File(pathString);
+        final _fileAssets = await _file.readAsBytes();
+        result = await platform.invokeMethod('adaptiveThreshold', {
+          "pathType": 4,
+          "pathString": '',
+          "data": _fileAssets,
+          'maxValue': maxValue,
+          'adaptiveMethod': adaptiveMethodTemp,
+          'thresholdType': thresholdTypeTemp,
+          'blockSize': blockSize,
+          'constantValue': constantValue
+        });
+        break;
     }
 
     return result;

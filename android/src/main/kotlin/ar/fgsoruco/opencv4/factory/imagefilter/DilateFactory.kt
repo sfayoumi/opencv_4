@@ -17,6 +17,7 @@ class DilateFactory {
                 1 -> result.success(dilateS(pathString, kernelSize))
                 2 -> result.success(dilateB(data, kernelSize))
                 3 -> result.success(dilateB(data, kernelSize))
+                4 -> result.success(dilateB(data, kernelSize))
             }
         }
 

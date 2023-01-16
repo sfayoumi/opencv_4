@@ -19,6 +19,9 @@
         case 3:
             result(cvtColorB(data,outputType));
             break;
+        case 4:
+            result(cvtColorB(data,outputType));
+            break;
         
         default:
             break;

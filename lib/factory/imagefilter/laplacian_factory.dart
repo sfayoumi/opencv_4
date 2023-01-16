@@ -62,6 +62,19 @@ class LaplacianFactory {
           },
         );
         break;
+      case CVPathFrom.LOCAL:
+        final _file = File(pathString);
+        _fileAssets = await _file.readAsBytes();
+        result = await platform.invokeMethod(
+          'laplacian',
+          {
+            "pathType": 4,
+            "pathString": '',
+            "data": _fileAssets,
+            'depth': depthTemp
+          },
+        );
+        break;
     }
     return result;
   }

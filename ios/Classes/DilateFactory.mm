@@ -19,6 +19,9 @@
         case 3:
             result(dilateB(data, kernelSizeDouble));
             break;
+        case 4:
+            result(dilateB(data, kernelSizeDouble));
+            break;
         
         default:
             break;

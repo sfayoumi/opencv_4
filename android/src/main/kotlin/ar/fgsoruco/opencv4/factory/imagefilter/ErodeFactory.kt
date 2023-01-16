@@ -17,6 +17,7 @@ class ErodeFactory {
                 1 -> result.success(erodeS(pathString, kernelSize))
                 2 -> result.success(erodeB(data, kernelSize))
                 3 -> result.success(erodeB(data, kernelSize))
+                4 -> result.success(erodeB(data, kernelSize))
             }
         }
 

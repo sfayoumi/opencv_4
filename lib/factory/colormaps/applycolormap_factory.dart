@@ -56,6 +56,16 @@ class ApplyColorMapFactory {
           'colorMap': colorMapTemp,
         });
         break;
+      case CVPathFrom.LOCAL:
+        final _file = File(pathString);
+        _fileAssets = await _file.readAsBytes();
+        result = await platform.invokeMethod('applyColorMap', {
+          "pathType": 4,
+          "pathString": '',
+          "data": _fileAssets,
+          'colorMap': colorMapTemp,
+        });
+        break;
     }
 
     return result;

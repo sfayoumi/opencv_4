@@ -19,6 +19,9 @@
         case 3:
             result(distanceTransformB(data, distanceType, maskSize));
             break;
+        case 4:
+            result(distanceTransformB(data, distanceType, maskSize));
+            break;
         
         default:
             break;

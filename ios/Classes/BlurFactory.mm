@@ -19,6 +19,9 @@
         case 3:
             result(blurB(data, kernelSizeInt, anchorPointInt, borderType));
             break;
+        case 4:
+            result(blurB(data, kernelSizeInt, anchorPointInt, borderType));
+            break;
         
         default:
             break;

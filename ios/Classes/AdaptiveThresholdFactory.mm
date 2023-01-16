@@ -19,6 +19,9 @@
         case 3:
             result(adaptiveThresholdB(data, maxValue, adaptiveMethod, thresholdType, blockSize, constantValue));
             break;
+        case 4:
+            result(adaptiveThresholdB(data, maxValue, adaptiveMethod, thresholdType, blockSize, constantValue));
+            break;
         
         default:
             break;

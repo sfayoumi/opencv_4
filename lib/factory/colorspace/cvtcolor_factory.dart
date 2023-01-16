@@ -51,6 +51,16 @@ class CvtColorFactory {
           'outputType': outputType,
         });
         break;
+      case CVPathFrom.LOCAL:
+        final _file = File(pathString);
+        _fileAssets = await _file.readAsBytes();
+        result = await platform.invokeMethod('cvtColor', {
+          "pathType": 4,
+          "pathString": '',
+          "data": _fileAssets,
+          'outputType': outputType,
+        });
+        break;
     }
 
     return result;

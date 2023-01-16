@@ -16,6 +16,7 @@ class ScharrFactory {
                 1 -> result.success(scharrS(pathString, depth, dx, dy))
                 2 -> result.success(scharrB(data, depth, dx, dy))
                 3 -> result.success(scharrB(data, depth, dx, dy))
+                4 -> result.success(scharrB(data, depth, dx, dy))
             }
         }
 

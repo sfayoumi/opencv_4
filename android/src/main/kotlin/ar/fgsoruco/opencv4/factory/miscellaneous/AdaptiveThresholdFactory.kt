@@ -19,6 +19,8 @@ class AdaptiveThresholdFactory {
                         blockSize, constantValue))
                 3 -> result.success(adaptiveThresholdB(data, maxValue, adaptiveMethod, thresholdType,
                         blockSize, constantValue))
+                4 -> result.success(adaptiveThresholdB(data, maxValue, adaptiveMethod, thresholdType,
+                        blockSize, constantValue))
             }
         }
 

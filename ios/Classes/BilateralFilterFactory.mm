@@ -17,6 +17,9 @@
         case 3:
             result(bilateralFilterB(data, diameter, sigmaColor, sigmaSpace, borderType));
             break;
+        case 4:
+            result(bilateralFilterB(data, diameter, sigmaColor, sigmaSpace, borderType));
+            break;
         
         default:
             break;

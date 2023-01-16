@@ -71,6 +71,21 @@ class BlurFactory {
           },
         );
         break;
+      case CVPathFrom.LOCAL:
+        final _file = File(pathString);
+        _fileAssets = await _file.readAsBytes();
+        result = await platform.invokeMethod(
+          'blur',
+          {
+            "pathType": 4,
+            "pathString": '',
+            "data": _fileAssets,
+            "kernelSize": kernelSizeTemp,
+            "anchorPoint": anchorPoint,
+            "borderType": borderTypeTemp,
+          },
+        );
+        break;
     }
     return result;
   }

@@ -17,6 +17,7 @@ class GaussianBlurFactory {
                 1 -> result.success(gaussianBlurS(pathString, kernelSize, sigmaX))
                 2 -> result.success(gaussianBlurB(data, kernelSize, sigmaX))
                 3 -> result.success(gaussianBlurB(data, kernelSize, sigmaX))
+                4 -> result.success(gaussianBlurB(data, kernelSize, sigmaX))
             }
         }
 

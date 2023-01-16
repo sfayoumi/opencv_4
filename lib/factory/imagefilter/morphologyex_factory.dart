@@ -70,6 +70,20 @@ class MorphologyExFactory {
           },
         );
         break;
+      case CVPathFrom.LOCAL:
+        final _file = File(pathString);
+        _fileAssets = await _file.readAsBytes();
+        result = await platform.invokeMethod(
+          'morphologyEx',
+          {
+            "pathType": 4,
+            "pathString": '',
+            "data": _fileAssets,
+            'operation': operationTemp,
+            'kernelSize': kernelSizeTemp,
+          },
+        );
+        break;
     }
     return result;
   }

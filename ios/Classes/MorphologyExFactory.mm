@@ -19,6 +19,9 @@
         case 3:
             result(morphologyExB(data, operation, kernelSizeDouble));
             break;
+        case 4:
+            result(morphologyExB(data, operation, kernelSizeDouble));
+            break;
         
         default:
             break;
