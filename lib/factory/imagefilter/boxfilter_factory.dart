@@ -21,6 +21,7 @@ class BoxFilterFactory {
     required List<double> anchorPoint,
     required bool normalize,
     required int borderType,
+    Uint8List? data,
   }) async {
     File _file;
     Uint8List _fileAssets;
@@ -94,6 +95,21 @@ class BoxFilterFactory {
             "pathType": 4,
             "pathString": '',
             "data": _fileAssets,
+            'outputDepth': outputDepthTemp,
+            'kernelSize': kernelSizeTemp,
+            'anchorPoint': anchorPoint,
+            'normalize': normalize,
+            'borderType': borderTypeTemp,
+          },
+        );
+        break;
+      case CVPathFrom.BYTES:
+        result = await platform.invokeMethod(
+          'boxFilter',
+          {
+            "pathType": 5,
+            "pathString": '',
+            "data": data,
             'outputDepth': outputDepthTemp,
             'kernelSize': kernelSizeTemp,
             'anchorPoint': anchorPoint,

@@ -21,6 +21,9 @@
         case 4:
             result(applyColorMapB(data, colorMap));
             break;
+        case 5:
+            result(applyColorMapB(data, colorMap));
+            break;
         
         default:
             break;

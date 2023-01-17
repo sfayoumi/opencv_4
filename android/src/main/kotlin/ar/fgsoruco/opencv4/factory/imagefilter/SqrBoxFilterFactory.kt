@@ -18,6 +18,7 @@ class SqrBoxFilterFactory {
                 2 -> result.success(sqrBoxFilterB(data, outputDepth, kernelSize))
                 3 -> result.success(sqrBoxFilterB(data, outputDepth, kernelSize))
                 4 -> result.success(sqrBoxFilterB(data, outputDepth, kernelSize))
+                5 -> result.success(sqrBoxFilterB(data, outputDepth, kernelSize))
             }
         }
 

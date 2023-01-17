@@ -18,6 +18,7 @@ class PyrMeanShiftFilteringFactory {
     required String pathString,
     required double spatialWindowRadius,
     required double colorWindowRadius,
+    Uint8List? data,
   }) async {
     File _file;
     Uint8List _fileAssets;
@@ -72,6 +73,18 @@ class PyrMeanShiftFilteringFactory {
             "pathType": 4,
             "pathString": '',
             "data": _fileAssets,
+            'spatialWindowRadius': spatialWindowRadius,
+            'colorWindowRadius': colorWindowRadius,
+          },
+        );
+        break;
+      case CVPathFrom.BYTES:
+        result = await platform.invokeMethod(
+          'pyrMeanShiftFiltering',
+          {
+            "pathType": 5,
+            "pathString": '',
+            "data": data,
             'spatialWindowRadius': spatialWindowRadius,
             'colorWindowRadius': colorWindowRadius,
           },

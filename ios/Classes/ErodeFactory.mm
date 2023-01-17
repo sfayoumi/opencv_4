@@ -22,6 +22,9 @@
         case 4:
             result(erodeB(data, kernelSizeDouble));
             break;
+        case 5:
+            result(erodeB(data, kernelSizeDouble));
+            break;
         
         default:
             break;

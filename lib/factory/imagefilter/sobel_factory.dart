@@ -19,6 +19,7 @@ class SobelFactory {
     required int depth,
     required int dx,
     required int dy,
+    Uint8List? data,
   }) async {
     File _file;
     Uint8List _fileAssets;
@@ -77,6 +78,19 @@ class SobelFactory {
             "pathType": 4,
             "pathString": '',
             "data": _fileAssets,
+            'depth': depthTemp,
+            'dx': dx,
+            'dy': dy,
+          },
+        );
+        break;
+      case CVPathFrom.BYTES:
+        result = await platform.invokeMethod(
+          'sobel',
+          {
+            "pathType": 5,
+            "pathString": '',
+            "data": data,
             'depth': depthTemp,
             'dx': dx,
             'dy': dy,

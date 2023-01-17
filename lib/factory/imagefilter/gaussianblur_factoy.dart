@@ -18,6 +18,7 @@ class GaussianBlurFactory {
     required String pathString,
     required List<double> kernelSize,
     required double sigmaX,
+    Uint8List? data,
   }) async {
     File _file;
     Uint8List _fileAssets;
@@ -74,6 +75,18 @@ class GaussianBlurFactory {
             "pathType": 4,
             "pathString": '',
             "data": _fileAssets,
+            'kernelSize': kernelSizeTemp,
+            'sigmaX': sigmaX
+          },
+        );
+        break;
+      case CVPathFrom.BYTES:
+        result = await platform.invokeMethod(
+          'gaussianBlur',
+          {
+            "pathType": 5,
+            "pathString": '',
+            "data": data,
             'kernelSize': kernelSizeTemp,
             'sigmaX': sigmaX
           },

@@ -18,6 +18,7 @@ class MorphologyExFactory {
     required String pathString,
     required int operation,
     required List<int> kernelSize,
+    Uint8List? data,
   }) async {
     File _file;
     Uint8List _fileAssets;
@@ -79,6 +80,18 @@ class MorphologyExFactory {
             "pathType": 4,
             "pathString": '',
             "data": _fileAssets,
+            'operation': operationTemp,
+            'kernelSize': kernelSizeTemp,
+          },
+        );
+        break;
+      case CVPathFrom.BYTES:
+        result = await platform.invokeMethod(
+          'morphologyEx',
+          {
+            "pathType": 5,
+            "pathString": '',
+            "data": data,
             'operation': operationTemp,
             'kernelSize': kernelSizeTemp,
           },

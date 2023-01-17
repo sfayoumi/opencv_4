@@ -18,6 +18,7 @@ class Filter2DFactory {
     required String pathString,
     required int outputDepth,
     required List<int> kernelSize,
+    Uint8List? data,
   }) async {
     File _file;
     Uint8List _fileAssets;
@@ -79,6 +80,18 @@ class Filter2DFactory {
             "pathType": 4,
             "pathString": '',
             "data": _fileAssets,
+            'outputDepth': outputDepthTemp,
+            'kernelSize': kernelSizeTemp,
+          },
+        );
+        break;
+      case CVPathFrom.BYTES:
+        result = await platform.invokeMethod(
+          'filter2D',
+          {
+            "pathType": 5,
+            "pathString": '',
+            "data": data,
             'outputDepth': outputDepthTemp,
             'kernelSize': kernelSizeTemp,
           },

@@ -19,6 +19,7 @@ class BlurFactory {
                 2 -> result.success(blurB(data, kernelSize, anchorPoint, borderType))
                 3 -> result.success(blurB(data, kernelSize, anchorPoint, borderType))
                 4 -> result.success(blurB(data, kernelSize, anchorPoint, borderType))
+                5 -> result.success(blurB(data, kernelSize, anchorPoint, borderType))
             }
         }
 

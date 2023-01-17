@@ -22,6 +22,9 @@
         case 4:
             result(filter2DB(data, outputDepth, kernelSizeDouble));
             break;
+        case 5:
+            result(filter2DB(data, outputDepth, kernelSizeDouble));
+            break;
         
         default:
             break;

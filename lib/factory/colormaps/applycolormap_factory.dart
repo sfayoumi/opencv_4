@@ -17,6 +17,7 @@ class ApplyColorMapFactory {
     required CVPathFrom pathFrom,
     required String pathString,
     required int colorMap,
+    Uint8List? data,
   }) async {
     File _file;
     Uint8List _fileAssets;
@@ -63,6 +64,14 @@ class ApplyColorMapFactory {
           "pathType": 4,
           "pathString": '',
           "data": _fileAssets,
+          'colorMap': colorMapTemp,
+        });
+        break;
+      case CVPathFrom.BYTES:
+        result = await platform.invokeMethod('applyColorMap', {
+          "pathType": 5,
+          "pathString": '',
+          "data": data!,
           'colorMap': colorMapTemp,
         });
         break;

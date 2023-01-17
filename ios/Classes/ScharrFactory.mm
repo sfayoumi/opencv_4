@@ -22,6 +22,9 @@
         case 4:
             result(scharrB(data, depth, dx, dy));
             break;
+        case 5:
+            result(scharrB(data, depth, dx, dy));
+            break;
         
         default:
             break;

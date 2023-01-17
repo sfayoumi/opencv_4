@@ -17,6 +17,7 @@ class LaplacianFactory {
     required CVPathFrom pathFrom,
     required String pathString,
     required int depth,
+    Uint8List? data,
   }) async {
     File _file;
     Uint8List _fileAssets;
@@ -73,6 +74,12 @@ class LaplacianFactory {
             "data": _fileAssets,
             'depth': depthTemp
           },
+        );
+        break;
+      case CVPathFrom.BYTES:
+        result = await platform.invokeMethod(
+          'laplacian',
+          {"pathType": 5, "pathString": '', "data": data, 'depth': depthTemp},
         );
         break;
     }

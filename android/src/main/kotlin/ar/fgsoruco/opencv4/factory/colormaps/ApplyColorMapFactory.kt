@@ -17,6 +17,7 @@ class ApplyColorMapFactory {
                 2 -> result.success(applyColorMapB(data, colorMap))
                 3 -> result.success(applyColorMapB(data, colorMap))
                 4 -> result.success(applyColorMapB(data, colorMap))
+                5 -> result.success(applyColorMapB(data, colorMap))
             }
         }
 

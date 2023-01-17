@@ -16,6 +16,7 @@ class DistanceTransformFactory {
                 2 -> result.success(distanceTransformB(data, distanceType, maskSize))
                 3 -> result.success(distanceTransformB(data, distanceType, maskSize))
                 4 -> result.success(distanceTransformB(data, distanceType, maskSize))
+                5 -> result.success(distanceTransformB(data, distanceType, maskSize))
             }
         }
 

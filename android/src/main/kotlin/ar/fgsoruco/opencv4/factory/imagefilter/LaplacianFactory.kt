@@ -17,6 +17,7 @@ class LaplacianFactory {
                 2 -> result.success(laplacianB(data, depth))
                 3 -> result.success(laplacianB(data, depth))
                 4 -> result.success(laplacianB(data, depth))
+                5 -> result.success(laplacianB(data, depth))
             }
         }
 

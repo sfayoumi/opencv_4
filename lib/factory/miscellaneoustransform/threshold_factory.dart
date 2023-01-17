@@ -19,6 +19,7 @@ class ThresholdFactory {
     required double thresholdValue,
     required double maxThresholdValue,
     required int thresholdType,
+    Uint8List? data,
   }) async {
     File _file;
     Uint8List _fileAssets;
@@ -65,6 +66,16 @@ class ThresholdFactory {
           "pathType": 4,
           "pathString": '',
           "data": _fileAssets,
+          'thresholdValue': thresholdValue,
+          'maxThresholdValue': maxThresholdValue,
+          'thresholdType': thresholdType
+        });
+        break;
+      case CVPathFrom.BYTES:
+        result = await platform.invokeMethod('threshold', {
+          "pathType": 5,
+          "pathString": '',
+          "data": data,
           'thresholdValue': thresholdValue,
           'maxThresholdValue': maxThresholdValue,
           'thresholdType': thresholdType

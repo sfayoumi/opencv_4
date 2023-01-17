@@ -22,6 +22,9 @@
         case 4:
             result(medianBlurB(data, kernelSize));
             break;
+        case 5:
+            result(medianBlurB(data, kernelSize));
+            break;
         
         default:
             break;

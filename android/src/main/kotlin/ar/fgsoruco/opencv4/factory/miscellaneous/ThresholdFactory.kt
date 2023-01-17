@@ -16,6 +16,7 @@ class ThresholdFactory {
                 2 -> result.success(thresholdB(data, thresholdValue, maxThresholdValue, thresholdType))
                 3 -> result.success(thresholdB(data, thresholdValue, maxThresholdValue, thresholdType))
                 4 -> result.success(thresholdB(data, thresholdValue, maxThresholdValue, thresholdType))
+                5 -> result.success(thresholdB(data, thresholdValue, maxThresholdValue, thresholdType))
             }
         }
 

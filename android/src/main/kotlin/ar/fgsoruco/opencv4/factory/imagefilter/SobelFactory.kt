@@ -17,6 +17,7 @@ class SobelFactory {
                 2 -> result.success(sobelB(data, depth, dx, dy))
                 3 -> result.success(sobelB(data, depth, dx, dy))
                 4 -> result.success(sobelB(data, depth, dx, dy))
+                5 -> result.success(sobelB(data, depth, dx, dy))
             }
         }
 

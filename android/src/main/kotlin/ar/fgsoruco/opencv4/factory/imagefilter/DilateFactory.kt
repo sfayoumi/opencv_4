@@ -18,6 +18,7 @@ class DilateFactory {
                 2 -> result.success(dilateB(data, kernelSize))
                 3 -> result.success(dilateB(data, kernelSize))
                 4 -> result.success(dilateB(data, kernelSize))
+                5 -> result.success(dilateB(data, kernelSize))
             }
         }
 

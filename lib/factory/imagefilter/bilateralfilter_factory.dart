@@ -20,6 +20,7 @@ class BilateralFilterFactory {
     required int sigmaColor,
     required int sigmaSpace,
     required int borderType,
+    Uint8List? data,
   }) async {
     File _file;
     Uint8List _fileAssets;
@@ -77,6 +78,17 @@ class BilateralFilterFactory {
           "pathType": 4,
           "pathString": '',
           "data": _fileAssets,
+          "diameter": diameterTemp,
+          "sigmaColor": sigmaColor,
+          "sigmaSpace": sigmaSpace,
+          "borderType": borderTypeTemp,
+        });
+        break;
+      case CVPathFrom.BYTES:
+        result = await platform.invokeMethod('bilateralFilter', {
+          "pathType": 5,
+          "pathString": '',
+          "data": data,
           "diameter": diameterTemp,
           "sigmaColor": sigmaColor,
           "sigmaSpace": sigmaSpace,

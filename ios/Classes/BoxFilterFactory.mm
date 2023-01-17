@@ -23,6 +23,9 @@
         case 4:
             result(boxFilterB(data, outputDepth, kernelSizeDouble, anchorPointDouble, normalize, borderType));
             break;
+        case 5:
+            result(boxFilterB(data, outputDepth, kernelSizeDouble, anchorPointDouble, normalize, borderType));
+            break;
         
         default:
             break;

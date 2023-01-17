@@ -17,6 +17,7 @@ class DilateFactory {
     required CVPathFrom pathFrom,
     required String pathString,
     required List<double> kernelSize,
+    Uint8List? data,
   }) async {
     File _file;
     Uint8List _fileAssets;
@@ -71,6 +72,17 @@ class DilateFactory {
             "pathType": 4,
             "pathString": '',
             "data": _fileAssets,
+            'kernelSize': kernelSizeTemp,
+          },
+        );
+        break;
+      case CVPathFrom.BYTES:
+        result = await platform.invokeMethod(
+          'dilate',
+          {
+            "pathType": 5,
+            "pathString": '',
+            "data": data,
             'kernelSize': kernelSizeTemp,
           },
         );

@@ -22,6 +22,9 @@
         case 4:
             result(thresholdB(data, thresholdValue, maxThresholdValue, thresholdType));
             break;
+        case 5:
+            result(thresholdB(data, thresholdValue, maxThresholdValue, thresholdType));
+            break;
         
         default:
             break;

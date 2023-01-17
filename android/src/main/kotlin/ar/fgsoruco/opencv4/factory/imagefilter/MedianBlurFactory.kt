@@ -17,6 +17,7 @@ class MedianBlurFactory {
                 2 -> result.success(medianBlurB(data, kernelSize))
                 3 -> result.success(medianBlurB(data, kernelSize))
                 4 -> result.success(medianBlurB(data, kernelSize))
+                5 -> result.success(medianBlurB(data, kernelSize))
             }
         }
 

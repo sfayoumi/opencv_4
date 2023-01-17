@@ -23,6 +23,9 @@
         case 4:
             result(sqrBoxFilterB(data, outputDepth, kernelSizeDouble));
             break;
+        case 5:
+            result(sqrBoxFilterB(data, outputDepth, kernelSizeDouble));
+            break;
         
         default:
             break;

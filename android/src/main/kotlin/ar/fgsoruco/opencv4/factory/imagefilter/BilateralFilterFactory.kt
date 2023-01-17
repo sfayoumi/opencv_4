@@ -16,6 +16,7 @@ class BilateralFilterFactory {
                 2 -> result.success(bilateralFilterB(data, diameter, sigmaColor, sigmaSpace, borderType))
                 3 -> result.success(bilateralFilterB(data, diameter, sigmaColor, sigmaSpace, borderType))
                 4 -> result.success(bilateralFilterB(data, diameter, sigmaColor, sigmaSpace, borderType))
+                5 -> result.success(bilateralFilterB(data, diameter, sigmaColor, sigmaSpace, borderType))
             }
         }
 

@@ -18,6 +18,7 @@ class SqrBoxFilterFactory {
     required String pathString,
     required int outputDepth,
     required List<double> kernelSize,
+    Uint8List? data,
   }) async {
     File _file;
     Uint8List _fileAssets;
@@ -75,6 +76,18 @@ class SqrBoxFilterFactory {
             "pathType": 4,
             "pathString": '',
             "data": _fileAssets,
+            'outputDepth': outputDepthTemp,
+            'kernelSize': kernelSizeTemp,
+          },
+        );
+        break;
+      case CVPathFrom.BYTES:
+        result = await platform.invokeMethod(
+          'sqrBoxFilter',
+          {
+            "pathType": 5,
+            "pathString": '',
+            "data": data,
             'outputDepth': outputDepthTemp,
             'kernelSize': kernelSizeTemp,
           },

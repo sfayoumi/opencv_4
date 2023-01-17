@@ -18,6 +18,7 @@ class ErodeFactory {
                 2 -> result.success(erodeB(data, kernelSize))
                 3 -> result.success(erodeB(data, kernelSize))
                 4 -> result.success(erodeB(data, kernelSize))
+                5 -> result.success(erodeB(data, kernelSize))
             }
         }
 

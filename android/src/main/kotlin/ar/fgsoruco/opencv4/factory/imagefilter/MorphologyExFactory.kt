@@ -18,6 +18,7 @@ class MorphologyExFactory {
                 2 -> result.success(morphologyExB(data, operation, kernelSize))
                 3 -> result.success(morphologyExB(data, operation, kernelSize))
                 4 -> result.success(morphologyExB(data, operation, kernelSize))
+                5 -> result.success(morphologyExB(data, operation, kernelSize))
             }
         }
 

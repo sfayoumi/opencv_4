@@ -23,6 +23,9 @@
         case 4:
             result(laplacianB(data, depth));
             break;
+        case 5:
+            result(laplacianB(data, depth));
+            break;
         
         default:
             break;
